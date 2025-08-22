@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: rgb(67, 61, 195);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: #ced6ce;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    input {
+      width: 75%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #0e1cb1;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+    }
+    .success {
+      color: green;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Name">
+      <div id="nameError" class="error"></div>
+
+      <input type="email" id="email" placeholder="Email">
+      <div id="emailError" class="error"></div>
+
+      <input type="password" id="password" placeholder="Password">
+      <div id="passwordError" class="error"></div>
+
+      <button type="submit">Submit</button>
+      <div id="message" class="success"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // reset messages
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("passwordError").textContent = "";
+      document.getElementById("message").textContent = "";
+
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value.trim();
+      let valid = true;
+
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required";
+        valid = false;
+      }
+      if (email === "") {
+        document.getElementById("emailError").textContent = "Email is required";
+        valid = false;
+      } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById("emailError").textContent = "Invalid email format";
+        valid = false;
+      }
+      if (password === "") {
+        document.getElementById("passwordError").textContent = "Password is required";
+        valid = false;
+      }
+
+      if (valid) {
+        document.getElementById("message").textContent = "Registration Successful 🎉";
+      }
+    });
+  </script>
+</body>
+</html>
