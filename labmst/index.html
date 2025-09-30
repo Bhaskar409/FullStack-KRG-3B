@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter with Auto Reset</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #ff1212;
+    }
+    #counter {
+      font-size: 2rem;
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      color: rgb(0, 255, 217);
+    }
+    #inc { background: rgb(153, 9, 231); }
+    #dec { background: rgb(255, 0, 132); }
+    #message {
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="counter">0</div>
+  <div>
+    <button id="dec">dec</button>
+    <button id="inc">inc</button>
+  </div>
+  <p id="message"></p>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById("counter");
+    const message = document.getElementById("message");
+
+    document.getElementById("inc").addEventListener("click", () => {
+      if (count < 10) {
+        count++;
+        message.textContent = "";
+      } else {
+        message.textContent = "maximum limit reached";
+        // Auto reset after 2 seconds
+        setTimeout(() => {
+          count = 0;
+          counter.textContent = count;
+          message.textContent = "";
+        }, 2000);
+      }
+      counter.textContent = count;
+    });
+
+    document.getElementById("dec").addEventListener("click", () => {
+      if (count > 0) {
+        count--;
+        message.textContent = "";
+      }
+      counter.textContent = count;
+    });
+  </script>
+</body>
+</html>
