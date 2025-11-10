@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Product Filter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    select {
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+
+    #productContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 5px;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    p.no-products {
+      font-size: 18px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dynamic Product Filter</h1>
+
+  <label for="categoryFilter">Filter by Category:</label>
+  <select id="categoryFilter">
+    <option value="All">All</option>
+    <option value="Mobile">Mobile</option>
+    <option value="Laptop">Laptop</option>
+    <option value="Accessories">Accessories</option>
+  </select>
+
+  <div id="productContainer"></div>
+
+  <script src="EXP3.js"></script>
+
+</body>
+</html>

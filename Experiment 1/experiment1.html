@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking Interface</title>
+  <link rel="stylesheet" href="
+  Experiment1.css">
+   
+</head>
+<body>
+
+  <div class="bank-container">
+    <h1>Banking System</h1>
+
+    <div class="balance-box">
+      Balance: $<span id="balance">1000</span>
+    </div>
+
+    <div class="input-box">
+      <label for="amount">Enter Amount</label>
+      <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+
+    <div class="btns">
+      <button class="deposit" onclick="deposit()">Deposit</button>
+      <button class="withdraw" onclick="withdraw()">Withdraw</button>
+    </div>
+
+    <p id="message" class="message"></p>
+  </div>
+
+  <script src="Experiment1.script"></script>
+
+</body>
+</html>

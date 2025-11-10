@@ -1,0 +1,120 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .bank-container {
+      width: 420px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .balance-box {
+      text-align: center;
+      background: #f3f6ff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+      box-shadow: inset 0px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #2575fc;
+      box-shadow: 0 0 6px rgba(37, 117, 252, 0.4);
+      outline: none;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .deposit {
+      background: linear-gradient(135deg, #00b09b, #96c93d);
+    }
+
+    .withdraw {
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .success { color: green; }
+    .error { color: red; }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .bank-container {
+        width: 90%;
+        padding: 20px;
+      }
+      h1 { font-size: 22px; }
+      .balance-box { font-size: 18px; }
+    }
