@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mypack.geofence.GeoFenceApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-10T05:26:02.742Z" hostname="FIZZY" time="0.85">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.mypack.geofence.GeoFenceApplicationTests" time="0.85"/>
+  <system-out><![CDATA[10:55:59.794 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mypack.geofence.GeoFenceApplicationTests]: GeoFenceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:56:00.002 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mypack.geofence.GeoFenceApplication for test class com.mypack.geofence.GeoFenceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-11-10T10:56:00.605+05:30  INFO 14808 --- [GeoFence] [    Test worker] c.m.geofence.GeoFenceApplicationTests    : Starting GeoFenceApplicationTests using Java 21.0.6 with PID 14808 (started by bhask in C:\Users\bhask\Desktop\java\GeoFence)
+2025-11-10T10:56:00.608+05:30  INFO 14808 --- [GeoFence] [    Test worker] c.m.geofence.GeoFenceApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-10T10:56:02.716+05:30  INFO 14808 --- [GeoFence] [    Test worker] c.m.geofence.GeoFenceApplicationTests    : Started GeoFenceApplicationTests in 2.484 seconds (process running for 4.148)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\bhask\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.17.8\f09415827a71be7ed621c7bd02550678f28bc81c\byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
