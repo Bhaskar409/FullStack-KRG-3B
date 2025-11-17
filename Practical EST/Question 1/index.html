@@ -1,0 +1,11 @@
+<!doctype html>
+<input id="user" placeholder="username">
+<button onclick="show()">Show</button>
+<div id="out"></div>
+
+<script>
+function show(){
+  const u = document.getElementById('user').value;
+  document.getElementById('out').textContent = 'Hello, ' + u;
+}
+</script>
